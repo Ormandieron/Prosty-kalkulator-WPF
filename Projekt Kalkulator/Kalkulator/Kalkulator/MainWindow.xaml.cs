@@ -12,7 +12,6 @@ namespace MyCalculatorv1
         }
         /// <summary>
         /// Metoda pobierająca wartość wciśniętego przycisku i dopisaniu go na wyświetlaczu
-        ///
         /// </summary>
        
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -21,7 +20,6 @@ namespace MyCalculatorv1
             tb.Text += b.Content.ToString();//wpisanie do textboxa liczby z nacisnietego przycisku
         }
         /// <summary>
-   
         /// Metoda wywołująca <see cref="result"/>. W przypadku błędu wypisuje na wyświetlaczu Error
         /// </summary>
        
@@ -42,48 +40,48 @@ namespace MyCalculatorv1
         /// </summary>
         private void result()
         {
-            String op;
-            int iOp = 0;
+            String w;
+            int iOz = 0;
             if (tb.Text.Contains("+"))//sprawdzenie czy zawiera +
             {
-                iOp = tb.Text.IndexOf("+");//przypisanie nr indexu w którym stoi "+"
+                iOz = tb.Text.IndexOf("+");//przypisanie nr indexu w którym stoi "+"
             }
             else if (tb.Text.Contains("-"))
             {
-                iOp = tb.Text.IndexOf("-");
+                iOz = tb.Text.IndexOf("-");
             }
             else if (tb.Text.Contains("*"))
             {
-                iOp = tb.Text.IndexOf("*");
+                iOz = tb.Text.IndexOf("*");
             }
             else if (tb.Text.Contains("/"))
             {
-                iOp = tb.Text.IndexOf("/");
+                iOz = tb.Text.IndexOf("/");
             }
             else
             {
                 //error    
             }
 
-            op = tb.Text.Substring(iOp, 1);
-            double op1 = Convert.ToDouble(tb.Text.Substring(0, iOp));//przekonwertowanie do typu double przypisanie do zmiennej op1
-            double op2 = Convert.ToDouble(tb.Text.Substring(iOp + 1, tb.Text.Length - iOp - 1));//przekonwertowanie do typu double przypisanie do zmiennej op2 + ucinanie
+            w = tb.Text.Substring(iOz, 1);
+            double w1 = Convert.ToDouble(tb.Text.Substring(0, iOz));//przekonwertowanie do typu double przypisanie do zmiennej op1
+            double w2 = Convert.ToDouble(tb.Text.Substring(iOz + 1, tb.Text.Length - iOz - 1));//przekonwertowanie do typu double przypisanie do zmiennej w2 + ucinanie
 
-            if (op == "+")
+            if (w == "+")
             {
-                tb.Text += "=" + (op1 + op2);//aktualizacja textboxa
+                tb.Text += "=" + (w1 + w2);//aktualizacja textboxa
             }
-            else if (op == "-")
+            else if (w == "-")
             {
-                tb.Text += "=" + (op1 - op2);
+                tb.Text += "=" + (w1 - w2);
             }
-            else if (op == "*")
+            else if (w == "*")
             {
-                tb.Text += "=" + (op1 * op2);
+                tb.Text += "=" + (w1 * w2);
             }
             else
             {
-                tb.Text += "=" + (op1 / op2);
+                tb.Text += "=" + (w1 / w2);
             }
         }
         /// <summary>
