@@ -5713,23 +5713,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Sebek\\.nuget\\packages\\": {},
+    "C:\\Users\\kon\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Sebek\\Desktop\\Projekt Kalkulator\\Kalkulator\\XUnitTestProject1\\XUnitTestProject1.csproj",
+      "projectUniqueName": "C:\\Users\\kon\\Downloads\\Prosty-kalkulator-WPF-master\\Projekt Kalkulator\\Kalkulator\\XUnitTestProject1\\XUnitTestProject1.csproj",
       "projectName": "XUnitTestProject1",
-      "projectPath": "C:\\Users\\Sebek\\Desktop\\Projekt Kalkulator\\Kalkulator\\XUnitTestProject1\\XUnitTestProject1.csproj",
-      "packagesPath": "C:\\Users\\Sebek\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Sebek\\Desktop\\Projekt Kalkulator\\Kalkulator\\XUnitTestProject1\\obj\\",
+      "projectPath": "C:\\Users\\kon\\Downloads\\Prosty-kalkulator-WPF-master\\Projekt Kalkulator\\Kalkulator\\XUnitTestProject1\\XUnitTestProject1.csproj",
+      "packagesPath": "C:\\Users\\kon\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\kon\\Downloads\\Prosty-kalkulator-WPF-master\\Projekt Kalkulator\\Kalkulator\\XUnitTestProject1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Sebek\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\kon\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5758,6 +5758,7 @@
             "version": "[15.7.0, )"
           },
           "Microsoft.NETCore.App": {
+            "suppressParent": "All",
             "target": "Package",
             "version": "[2.0.0, )",
             "autoReferenced": true

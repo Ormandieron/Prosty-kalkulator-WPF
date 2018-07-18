@@ -5,7 +5,7 @@ using System.Windows.Controls;
 namespace MyCalculatorv1
 {
     public partial class MainWindow : Window
-    {
+    {  
         public MainWindow()
         {
             InitializeComponent();
@@ -28,6 +28,7 @@ namespace MyCalculatorv1
             try
             {
                 result();//wywołanie metody liczącej
+
             }
             catch (Exception exc)
             {
@@ -39,7 +40,7 @@ namespace MyCalculatorv1
         /// Wyświetla na ekranie przeprowadzone działanie
         /// </summary>
         private void result()
-        {
+        {   
             String w;
             int iOz = 0;
             if (tb.Text.Contains("+"))//sprawdzenie czy zawiera +
@@ -67,22 +68,28 @@ namespace MyCalculatorv1
             double w1 = Convert.ToDouble(tb.Text.Substring(0, iOz));//przekonwertowanie do typu double przypisanie do zmiennej op1
             double w2 = Convert.ToDouble(tb.Text.Substring(iOz + 1, tb.Text.Length - iOz - 1));//przekonwertowanie do typu double przypisanie do zmiennej w2 + ucinanie
 
+            tb.Text += "=" + getrestult(w, w1, w2);
+        }
+        public double getrestult(string w, double w1, double w2)
+        {
+            double r;
             if (w == "+")
             {
-                tb.Text += "=" + (w1 + w2);//aktualizacja textboxa
+               r= (w1 + w2);//aktualizacja textboxa
             }
             else if (w == "-")
             {
-                tb.Text += "=" + (w1 - w2);
+               r= (w1 - w2);
             }
             else if (w == "*")
             {
-                tb.Text += "=" + (w1 * w2);
+               r= (w1 * w2);
             }
             else
             {
-                tb.Text += "=" + (w1 / w2);
+                r = (w1 / w2);
             }
+            return r;
         }
         /// <summary>
         /// Metoda mająca na celu wyłączyć aplikację
